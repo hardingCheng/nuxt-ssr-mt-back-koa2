@@ -14,6 +14,8 @@ import users from './routes/users'
 import geos from './routes/geo'
 import search from './routes/search'
 import category from './routes/category'
+import cart from './routes/cart'
+
 const app = new Koa()
 // error handler
 onerror(app)
@@ -68,6 +70,7 @@ app.use(users.routes(), users.allowedMethods())
 app.use(geos.routes(), geos.allowedMethods())
 app.use(search.routes(), search.allowedMethods())
 app.use(category.routes(), category.allowedMethods())
+app.use(cart.routes(), cart.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

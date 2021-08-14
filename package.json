@@ -15,6 +15,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "consola": "^2.15.3",
+    "crypto-js": "^4.1.1",
     "debug": "^4.1.1",
     "js-pinyin": "^0.1.9",
     "jsonwebtoken": "^8.5.1",
