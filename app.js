@@ -13,6 +13,7 @@ import index from './routes/index'
 import users from './routes/users'
 import geos from './routes/geo'
 import search from './routes/search'
+import category from './routes/category'
 const app = new Koa()
 // error handler
 onerror(app)
@@ -66,6 +67,8 @@ app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(geos.routes(), geos.allowedMethods())
 app.use(search.routes(), search.allowedMethods())
+app.use(category.routes(), category.allowedMethods())
+
 // error-handling
 app.on('error', (err, ctx) => {
     console.error('server error', err, ctx)
